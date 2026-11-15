@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><title>Kromma Tech | Rodas, pneus e peças automotivas em Campo Largo, PR</title>
+<meta name="description" content="Kromma Tech: rodas, pneus, peças e serviços automotivos em Campo Largo, PR. Conheça a loja, veja os destaques e fale com a equipe.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050505">
+<script>
+/* Decide ANTES da primeira pintura se o loading roda: só na 1ª entrada da sessão (ou com ?intro), e nunca com "reduzir movimento".
+   Rede de segurança: se algo falhar, o site é liberado em 7 s. */
+(function(){var d=document.documentElement;d.classList.add('has-js');
+var first=true;try{first=!sessionStorage.getItem('kromma:intro')}catch(e){}
+var force=/[?&]intro(=|&|$)/.test(location.search),rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if((first||force)&&!rm)d.classList.add('has-intro');
+setTimeout(function(){d.classList.add('hero-go');d.classList.remove('has-intro')},7000)})();
+</script>
+<link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="192x192" href="assets/brand/icon-192.png"><link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Kromma Tech">
+<meta property="og:title" content="Kromma Tech | Rodas, pneus e peças automotivas em Campo Largo, PR">
+<meta property="og:description" content="Rodas, pneus, peças e serviços automotivos em Campo Largo, PR. Conheça a Kromma Tech e fale com a equipe.">
+<meta property="og:image" content="assets/og/kromma-og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Fachada da Kromma Tech com a logo da loja">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Kromma Tech | Rodas, pneus e peças automotivas"><meta name="twitter:description" content="Rodas, pneus, peças e serviços automotivos em Campo Largo, PR."><meta name="twitter:image" content="assets/og/kromma-og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoPartsStore","name":"Kromma Tech","description":"Rodas, pneus, peças e serviços automotivos.","telephone":"+55 41 3032-4864","address":{"@type":"PostalAddress","streetAddress":"Rua Centenário, 2453","addressLocality":"Campo Largo","addressRegion":"PR","addressCountry":"BR"},"sameAs":["https://www.instagram.com/krommatech/"]}</script>
+<link rel="preload" as="image" href="assets/video/hero-poster.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/intro.css"><link rel="stylesheet" href="css/hero.css"><link rel="stylesheet" href="css/site.css"><link rel="stylesheet" href="css/mobile.css">
+</head><body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<!-- ETAPA 2 · LOADING (decorativo; só existe com html.has-intro) -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__stage">
+    <div class="intro__scene">
+      <div class="intro__bg"></div>
+      <div class="intro__vignette"></div>
+      <div class="intro__line"></div>
+    </div>
+    <!-- passagem da roda: rastros e brilho (atrás), cortina vermelha, roda 3D (WebGL, js/wheel3d.js), flare -->
+    <div class="intro__trail"></div>
+    <div class="intro__edge"></div>
+    <canvas class="intro__wheel"></canvas>
+    <div class="intro__flare"></div>
+  </div>
+  <div class="intro__ring"></div>
+  <img class="intro__logo" src="assets/brand/kromma-logo.png" alt="" width="376" height="367">
+  <button class="intro__skip" type="button">Pular</button>
+</div>
+
+<header class="header"><div class="container header__inner">
+  <a href="#inicio" aria-label="Kromma Tech — início"><img class="logo" src="assets/brand/kromma-logo.png" alt="Kromma Tech Rodas • Pneus" width="376" height="367"></a>
+  <nav class="nav" aria-label="Principal"><a href="#categorias">Categorias</a><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></nav>
+  <a class="btn btn--sm" href="#contato" data-wa data-tel-label="Ligar"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"/></svg><span class="wa-t">WhatsApp</span></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menu"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-menu"/></svg></button>
+</div></header>
+<div class="drawer" id="drawer" inert>
+  <a href="#categorias">Categorias</a><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a>
+  <a class="btn" href="#contato" data-wa data-tel-label="Ligar agora"><span class="wa-t">Chamar no WhatsApp</span></a>
+</div>
+
+<main id="main">
+  <!-- ETAPA 2 · HERO -->
+  <section class="hero hero--home" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__media">
+      <div class="hero__stage">
+        <video class="hero__video" muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true" tabindex="-1" data-hold>
+          <source src="assets/video/hero-kromma.webm" type='video/webm; codecs="vp9"'>
+          <source src="assets/video/hero-kromma.mp4" type='video/mp4; codecs="avc1.640028"'>
+        </video>
+      </div>
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__fx" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <div class="container hero__content">
+      <div class="hero__copy">
+        <p class="label hero__eyebrow" data-a><span class="hero__eyebrow-in">Kromma Tech<span class="dot"></span>Rodas<span class="dot"></span>Pneus</span></p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="line" style="--i:0"><span class="line__in">Rodas e pneus</span></span>
+          <span class="line" style="--i:1"><span class="line__in">com <em class="hl">presença</em></span></span>
+          <span class="line" style="--i:2"><span class="line__in">de pista.</span></span>
+        </h1>
+        <p class="lead hero__lead" data-a>Na Kromma Tech você encontra rodas e pneus para dar mais estilo e presença ao seu veículo.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#produtos" data-a>Explorar produtos <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+          <a class="btn btn--outline" href="#contato" data-a>Falar com a equipe</a>
+        </div>
+      </div>
+    </div>
+    <a class="hero__cue" href="#produtos" data-a aria-label="Rolar para baixo"><span class="label">Role</span><i></i></a>
+  </section>
+
+  <!-- 2 · CATEGORIAS (6 oficiais; "Veículos" agrupa as duas categorias de veículos da loja antiga) -->
+  <section class="section cats" id="categorias" aria-labelledby="t-cat"><div class="container">
+    <div class="sec-head"><p class="label eyebrow">Categorias</p><h2 id="t-cat">Tudo para o seu <em class="red">veículo</em></h2></div>
+    <nav class="cats__rail" aria-label="Categorias de produtos"><a class="cat" href="#produtos"><div class="slot has-img" data-slot="categoria-rodas"><picture><source type="image/webp" srcset="assets/img/roda-polida-oito-furos-480.webp 480w, assets/img/roda-polida-oito-furos-800.webp 800w, assets/img/roda-polida-oito-furos-1200.webp 1200w, assets/img/roda-polida-oito-furos-1600.webp 1600w" sizes="(max-width:899px) 100vw, 480px"><img src="assets/img/roda-polida-oito-furos.jpg" srcset="assets/img/roda-polida-oito-furos-480.jpg 480w, assets/img/roda-polida-oito-furos-800.jpg 800w, assets/img/roda-polida-oito-furos-1200.jpg 1200w, assets/img/roda-polida-oito-furos-1600.jpg 1600w" sizes="(max-width:899px) 100vw, 480px" width="2000" height="2130" alt="Roda de liga polida sobre caixa, na loja" loading="lazy" decoding="async" style="object-position:50% 45%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-rodas"/></svg><span class="cat__n">01</span><div class="cat__body"><h3>Rodas</h3><span class="cat__go label">Ver destaques <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a><a class="cat" href="#produtos"><div class="slot has-img" data-slot="categoria-pneus"><picture><source type="image/webp" srcset="assets/img/pneus-off-road-empilhados-480.webp 480w, assets/img/pneus-off-road-empilhados-800.webp 800w, assets/img/pneus-off-road-empilhados-1200.webp 1200w, assets/img/pneus-off-road-empilhados-1320.webp 1320w" sizes="(max-width:899px) 50vw, 480px"><img src="assets/img/pneus-off-road-empilhados.jpg" srcset="assets/img/pneus-off-road-empilhados-480.jpg 480w, assets/img/pneus-off-road-empilhados-800.jpg 800w, assets/img/pneus-off-road-empilhados-1200.jpg 1200w, assets/img/pneus-off-road-empilhados-1320.jpg 1320w" sizes="(max-width:899px) 50vw, 480px" width="1320" height="1596" alt="Pneus de uso fora de estrada empilhados na loja" loading="lazy" decoding="async" style="object-position:50% 40%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-pneus"/></svg><span class="cat__n">02</span><div class="cat__body"><h3>Pneus</h3><span class="cat__go label">Ver destaques <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a><a class="cat" href="#contato"><div class="slot has-img" data-slot="categoria-pecas"><picture><source type="image/webp" srcset="assets/img/vitrine-molas-eibach-480.webp 480w, assets/img/vitrine-molas-eibach-800.webp 800w, assets/img/vitrine-molas-eibach-1200.webp 1200w, assets/img/vitrine-molas-eibach-1310.webp 1310w" sizes="(max-width:899px) 50vw, 480px"><img src="assets/img/vitrine-molas-eibach.jpg" srcset="assets/img/vitrine-molas-eibach-480.jpg 480w, assets/img/vitrine-molas-eibach-800.jpg 800w, assets/img/vitrine-molas-eibach-1200.jpg 1200w, assets/img/vitrine-molas-eibach-1310.jpg 1310w" sizes="(max-width:899px) 50vw, 480px" width="1310" height="2232" alt="Vitrine da loja com molas e caixas de suspensão Eibach" loading="lazy" decoding="async" style="object-position:50% 55%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-pecas"/></svg><span class="cat__n">03</span><div class="cat__body"><h3>Peças</h3><span class="cat__go label">Consultar <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a><a class="cat" href="#contato"><div class="slot has-img" data-slot="categoria-acessorios"><picture><source type="image/webp" srcset="assets/img/expositor-palhetas-rodas-480.webp 480w, assets/img/expositor-palhetas-rodas-800.webp 800w, assets/img/expositor-palhetas-rodas-894.webp 894w" sizes="(max-width:899px) 50vw, 480px"><img src="assets/img/expositor-palhetas-rodas.jpg" srcset="assets/img/expositor-palhetas-rodas-480.jpg 480w, assets/img/expositor-palhetas-rodas-800.jpg 800w, assets/img/expositor-palhetas-rodas-894.jpg 894w" sizes="(max-width:899px) 50vw, 480px" width="894" height="1590" alt="Expositor com palhetas de limpador de para-brisa entre prateleiras de rodas esportivas" loading="lazy" decoding="async" style="object-position:50% 55%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-acessorios"/></svg><span class="cat__n">04</span><div class="cat__body"><h3>Acessórios</h3><span class="cat__go label">Consultar <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a><a class="cat" href="#contato"><div class="slot has-img" data-slot="categoria-servicos"><picture><source type="image/webp" srcset="assets/img/mecanico-alinhamento-roda-480.webp 480w, assets/img/mecanico-alinhamento-roda-800.webp 800w, assets/img/mecanico-alinhamento-roda-900.webp 900w" sizes="(max-width:899px) 50vw, 480px"><img src="assets/img/mecanico-alinhamento-roda.jpg" srcset="assets/img/mecanico-alinhamento-roda-480.jpg 480w, assets/img/mecanico-alinhamento-roda-800.jpg 800w, assets/img/mecanico-alinhamento-roda-900.jpg 900w" sizes="(max-width:899px) 50vw, 480px" width="900" height="1602" alt="Mecânico de macacão vermelho ajustando o equipamento de alinhamento instalado em uma roda" loading="lazy" decoding="async" style="object-position:50% 62%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-servicos"/></svg><span class="cat__n">05</span><div class="cat__body"><h3>Serviços</h3><span class="cat__go label">Consultar <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a><a class="cat" href="#contato"><div class="slot has-img" data-slot="categoria-veiculos"><picture><source type="image/webp" srcset="assets/img/picape-preta-galpao-pneus-480.webp 480w, assets/img/picape-preta-galpao-pneus-800.webp 800w, assets/img/picape-preta-galpao-pneus-900.webp 900w" sizes="(max-width:899px) 100vw, 480px"><img src="assets/img/picape-preta-galpao-pneus.jpg" srcset="assets/img/picape-preta-galpao-pneus-480.jpg 480w, assets/img/picape-preta-galpao-pneus-800.jpg 800w, assets/img/picape-preta-galpao-pneus-900.jpg 900w" sizes="(max-width:899px) 100vw, 480px" width="900" height="1514" alt="Picape preta com rodas escuras e pneus off-road em um galpão com pneus ao fundo" loading="lazy" decoding="async" style="object-position:55% 62%"></picture></div><svg class="cat__glyph" aria-hidden="true"><use href="assets/icons/sprite.svg#g-veiculos"/></svg><span class="cat__n">06</span><div class="cat__body"><h3>Veículos</h3><span class="cat__go label">Consultar <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></span></div></a></nav>
+  </div></section>
+
+  <!-- 3 · PRODUTOS EM DESTAQUE (espaços; catálogo na etapa futura) -->
+  <section class="section feat" id="produtos" aria-labelledby="t-prod"><div class="container">
+    <div class="sec-head"><p class="label eyebrow">Em destaque</p><h2 id="t-prod">Produtos em destaque</h2></div>
+    <div class="feat__grid" id="vitrine"><article class="pc pc--a" data-cat="rodas"><div class="pc__media"><div class="slot has-img" data-slot="destaque-rodas" style="--ar:4/5"><picture><source type="image/webp" srcset="assets/img/roda-polida-aro-estudio-480.webp 480w, assets/img/roda-polida-aro-estudio-800.webp 800w, assets/img/roda-polida-aro-estudio-1200.webp 1200w, assets/img/roda-polida-aro-estudio-1292.webp 1292w" sizes="(max-width:640px) 84vw, (max-width:899px) 46vw, 600px"><img src="assets/img/roda-polida-aro-estudio.jpg" srcset="assets/img/roda-polida-aro-estudio-480.jpg 480w, assets/img/roda-polida-aro-estudio-800.jpg 800w, assets/img/roda-polida-aro-estudio-1200.jpg 1200w, assets/img/roda-polida-aro-estudio-1292.jpg 1292w" sizes="(max-width:640px) 84vw, (max-width:899px) 46vw, 600px" width="1292" height="1376" alt="Roda de liga polida com cubo central, sobre caixa" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></div></div><div class="pc__info"><h3>Rodas</h3><a class="btn btn--sm pc__cta" href="#contato" data-wa data-tel-label="Ligar para consultar" data-wa-msg="Olá! Gostaria de consultar a disponibilidade de um produto da categoria Rodas.">Consultar disponibilidade</a></div></article><article class="pc pc--b" data-cat="pneus"><div class="pc__media"><div class="slot has-img" data-slot="destaque-pneus" style="--ar:16/9"><picture><source type="image/webp" srcset="assets/img/pneu-etiqueta-vitrine-480.webp 480w, assets/img/pneu-etiqueta-vitrine-800.webp 800w, assets/img/pneu-etiqueta-vitrine-1200.webp 1200w, assets/img/pneu-etiqueta-vitrine-1512.webp 1512w" sizes="(max-width:640px) 84vw, (max-width:899px) 46vw, 600px"><img src="assets/img/pneu-etiqueta-vitrine.jpg" srcset="assets/img/pneu-etiqueta-vitrine-480.jpg 480w, assets/img/pneu-etiqueta-vitrine-800.jpg 800w, assets/img/pneu-etiqueta-vitrine-1200.jpg 1200w, assets/img/pneu-etiqueta-vitrine-1512.jpg 1512w" sizes="(max-width:640px) 84vw, (max-width:899px) 46vw, 600px" width="1512" height="1516" alt="Pneus empilhados com etiqueta de especificações, na entrada da loja" loading="lazy" decoding="async" style="object-position:50% 38%"></picture></div></div><div class="pc__info"><h3>Pneus</h3><a class="btn btn--sm pc__cta" href="#contato" data-wa data-tel-label="Ligar para consultar" data-wa-msg="Olá! Gostaria de consultar a disponibilidade de um produto da categoria Pneus.">Consultar disponibilidade</a></div></article></div>
+    <p class="feat__note label" hidden>Nenhum destaque nesta categoria.</p>
+  </div></section>
+
+  <!-- 4 · SOBRE -->
+  <section class="section about" id="sobre" aria-labelledby="t-sobre"><div class="container about__grid">
+    <div class="about__comp"><div class="slot has-img about__main" data-slot="sobre-loja" style="--ar:4/5"><picture><source type="image/webp" srcset="assets/img/pneus-empilhados-na-porta-480.webp 480w, assets/img/pneus-empilhados-na-porta-800.webp 800w, assets/img/pneus-empilhados-na-porta-1200.webp 1200w, assets/img/pneus-empilhados-na-porta-1510.webp 1510w" sizes="(max-width:860px) 92vw, 560px"><img src="assets/img/pneus-empilhados-na-porta.jpg" srcset="assets/img/pneus-empilhados-na-porta-480.jpg 480w, assets/img/pneus-empilhados-na-porta-800.jpg 800w, assets/img/pneus-empilhados-na-porta-1200.jpg 1200w, assets/img/pneus-empilhados-na-porta-1510.jpg 1510w" sizes="(max-width:860px) 92vw, 560px" width="1510" height="1550" alt="Pilha de pneus na porta da loja, ao lado de uma roda em caixa" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></div><i class="about__bar" aria-hidden="true"></i></div>
+    <div class="stack"><p class="label eyebrow">Sobre a Kromma</p><h2 id="t-sobre">Kromma <em class="red">Tech</em></h2>
+      <p class="lead">Rodas, pneus, peças e serviços automotivos em Campo Largo, PR.</p>
+      
+    </div>
+  </div></section>
+
+  <!-- FACHADA E LOJA -->
+  <section class="section loja" id="loja" aria-labelledby="t-loja"><div class="container">
+    <div class="sec-head"><p class="label eyebrow">Fachada e loja</p><h2 id="t-loja">Conheça o <em class="red">espaço</em></h2></div>
+    <div class="loja__grid"><div class="slot has-img loja__a" data-slot="loja-fachada" style="--ar:21/9"><picture><source type="image/webp" srcset="assets/img/fachada-kromma-tech-480.webp 480w, assets/img/fachada-kromma-tech-800.webp 800w, assets/img/fachada-kromma-tech-1200.webp 1200w, assets/img/fachada-kromma-tech-1600.webp 1600w" sizes="(max-width:1280px) 100vw, 1280px"><img src="assets/img/fachada-kromma-tech.jpg" srcset="assets/img/fachada-kromma-tech-480.jpg 480w, assets/img/fachada-kromma-tech-800.jpg 800w, assets/img/fachada-kromma-tech-1200.jpg 1200w, assets/img/fachada-kromma-tech-1600.jpg 1600w" sizes="(max-width:1280px) 100vw, 1280px" width="2400" height="1240" alt="Fachada da Kromma Tech com pneus e rodas expostos na entrada" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></div></div>
+  </div></section>
+
+
+  <!-- 6 · GALERIA DE VEÍCULOS -->
+  <section class="section gal" id="galeria" aria-labelledby="t-gal"><div class="container">
+    <div class="sec-head"><p class="label eyebrow">Galeria</p><h2 id="t-gal">Galeria de <em class="red">veículos</em></h2><p>Carros, rodas instaladas e projetos.</p></div>
+    <div class="gal__grid"><figure class="gi g1"><div class="slot has-img" data-slot="galeria-1" style="--ar:16/10"><picture><source type="image/webp" srcset="assets/img/picape-preta-na-loja-480.webp 480w, assets/img/picape-preta-na-loja-800.webp 800w, assets/img/picape-preta-na-loja-1200.webp 1200w, assets/img/picape-preta-na-loja-1212.webp 1212w" sizes="(max-width:700px) 100vw, 800px"><img src="assets/img/picape-preta-na-loja.jpg" srcset="assets/img/picape-preta-na-loja-480.jpg 480w, assets/img/picape-preta-na-loja-800.jpg 800w, assets/img/picape-preta-na-loja-1200.jpg 1200w, assets/img/picape-preta-na-loja-1212.jpg 1212w" sizes="(max-width:700px) 100vw, 800px" width="1212" height="1598" alt="Picape preta com rodas escuras e pneus de uso misto, dentro da loja" loading="lazy" decoding="async" style="object-position:50% 62%"></picture></div><figcaption><span class="tag">Carros</span></figcaption></figure><figure class="gi g2"><div class="slot has-img" data-slot="galeria-2" style="--ar:3/4"><picture><source type="image/webp" srcset="assets/img/roda-preta-friso-vermelho-480.webp 480w, assets/img/roda-preta-friso-vermelho-800.webp 800w, assets/img/roda-preta-friso-vermelho-1200.webp 1200w, assets/img/roda-preta-friso-vermelho-1304.webp 1304w" sizes="(max-width:700px) 50vw, 480px"><img src="assets/img/roda-preta-friso-vermelho.jpg" srcset="assets/img/roda-preta-friso-vermelho-480.jpg 480w, assets/img/roda-preta-friso-vermelho-800.jpg 800w, assets/img/roda-preta-friso-vermelho-1200.jpg 1200w, assets/img/roda-preta-friso-vermelho-1304.jpg 1304w" sizes="(max-width:700px) 50vw, 480px" width="1304" height="1590" alt="Roda preta com faces polidas e friso vermelho, sobre pneus" loading="lazy" decoding="async" style="object-position:50% 50%"></picture></div><figcaption><span class="tag">Rodas</span></figcaption></figure><figure class="gi g5"><div class="slot has-img" data-slot="galeria-5" style="--ar:21/9"><picture><source type="image/webp" srcset="assets/img/picape-amarela-4x4-loja-480.webp 480w, assets/img/picape-amarela-4x4-loja-800.webp 800w, assets/img/picape-amarela-4x4-loja-1200.webp 1200w, assets/img/picape-amarela-4x4-loja-1600.webp 1600w" sizes="(max-width:700px) 100vw, 800px"><img src="assets/img/picape-amarela-4x4-loja.jpg" srcset="assets/img/picape-amarela-4x4-loja-480.jpg 480w, assets/img/picape-amarela-4x4-loja-800.jpg 800w, assets/img/picape-amarela-4x4-loja-1200.jpg 1200w, assets/img/picape-amarela-4x4-loja-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 800px" width="2190" height="1288" alt="Picape 4x4 amarela com rodas pretas e pneus off-road" loading="lazy" decoding="async" style="object-position:40% 55%"></picture></div><figcaption><span class="tag">Projetos</span></figcaption></figure><figure class="gi g6"><div class="slot has-img" data-slot="galeria-6" style="--ar:4/5"><picture><source type="image/webp" srcset="assets/img/roda-preta-polida-na-caixa-480.webp 480w, assets/img/roda-preta-polida-na-caixa-800.webp 800w, assets/img/roda-preta-polida-na-caixa-1200.webp 1200w, assets/img/roda-preta-polida-na-caixa-1328.webp 1328w" sizes="(max-width:700px) 50vw, 480px"><img src="assets/img/roda-preta-polida-na-caixa.jpg" srcset="assets/img/roda-preta-polida-na-caixa-480.jpg 480w, assets/img/roda-preta-polida-na-caixa-800.jpg 800w, assets/img/roda-preta-polida-na-caixa-1200.jpg 1200w, assets/img/roda-preta-polida-na-caixa-1328.jpg 1328w" sizes="(max-width:700px) 50vw, 480px" width="1328" height="1684" alt="Roda preta com detalhes polidos dentro de uma caixa de papelão" loading="lazy" decoding="async" style="object-position:40% 50%"></picture></div><figcaption><span class="tag">Rodas</span></figcaption></figure></div>
+  </div></section>
+
+
+  <!-- 8 · LOCALIZAÇÃO -->
+  <section class="loc" id="localizacao" aria-labelledby="t-loc">
+    <div class="loc__map"><iframe title="Mapa: Rua Centenário, 2453, Campo Largo, PR" src="https://www.google.com/maps?q=Rua+Centen%C3%A1rio%2C+2453%2C+Campo+Largo%2C+PR&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    <div class="container loc__over"><div class="loc__card">
+      <p class="label eyebrow">Localização</p><h2 id="t-loc">Venha até <em class="red">nós</em></h2>
+      <address class="loc__addr"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"/></svg><span>Rua Centenário, 2453<br>Campo Largo, PR</span></address>
+      <div class="loc__cta"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Centen%C3%A1rio%2C+2453%2C+Campo+Largo%2C+PR" target="_blank" rel="noopener">Abrir no Google Maps <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a><a class="btn btn--outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Centen%C3%A1rio%2C+2453%2C+Campo+Largo%2C+PR" target="_blank" rel="noopener">Como chegar</a></div>
+    </div></div>
+  </section>
+
+  <!-- 9 · CONTATO -->
+  <section class="section contact" id="contato" aria-labelledby="t-ct"><div class="container">
+    <div class="contact__top"><p class="label eyebrow">Contato</p><h2 id="t-ct">Vamos <em class="red">conversar?</em></h2><p class="lead">Fale com a equipe da Kromma Tech.</p></div>
+    <div class="contact__chan">
+      <a class="chan chan--wa" href="#contato" data-wa data-wa-only><span class="chan__ico"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"/></svg></span><span class="chan__txt"><b>WhatsApp</b><span>Consulte disponibilidade e atendimento</span></span><svg class="icon chan__go" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+      <a class="chan" href="tel:+554130324864"><span class="chan__ico"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"/></svg></span><span class="chan__txt"><b>Telefone</b><span>(41) 3032-4864</span></span><svg class="icon chan__go" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+      <a class="chan" href="https://www.instagram.com/krommatech/" target="_blank" rel="noopener"><span class="chan__ico"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"/></svg></span><span class="chan__txt"><b>Instagram</b><span>@krommatech</span></span><svg class="icon chan__go" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+      <a class="chan" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Centen%C3%A1rio%2C+2453%2C+Campo+Largo%2C+PR" target="_blank" rel="noopener"><span class="chan__ico"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"/></svg></span><span class="chan__txt"><b>Endereço</b><span>Rua Centenário, 2453 — Campo Largo, PR</span></span><svg class="icon chan__go" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+    </div>
+  </div></section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div class="footer__brand"><a href="#inicio" aria-label="Kromma Tech — voltar ao topo"><img class="logo logo--lg" src="assets/brand/kromma-logo.png" alt="Kromma Tech Rodas • Pneus" width="376" height="367" loading="lazy" style="width:7rem"></a><p>Rodas, pneus, peças e serviços automotivos.</p></div>
+    <div><p class="label">Navegação</p><ul><li><a href="#categorias">Categorias</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#localizacao">Localização</a></li><li><a href="#contato">Contato</a></li></ul></div>
+    <div><p class="label">Contato</p><ul class="footer__contact"><li><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Centen%C3%A1rio%2C+2453%2C+Campo+Largo%2C+PR" target="_blank" rel="noopener">Rua Centenário, 2453<br>Campo Largo, PR</a></li><li><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-instagram"/></svg><a href="https://www.instagram.com/krommatech/" target="_blank" rel="noopener">@krommatech</a></li><li><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"/></svg><a href="tel:+554130324864">(41) 3032-4864</a></li><li data-wa-only><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#i-phone"/></svg><a href="#contato" data-wa>WhatsApp</a></li></ul></div>
+  </div>
+  <hr class="rule rule--racing"><div class="footer__base"><span class="label">© 2026 Kromma Tech. Todos os direitos reservados.</span><span class="label">Rodas<span class="dot"></span>Pneus</span></div>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/hero.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/mobile.js" defer></script>
+<script src="js/wheel3d.js" defer></script>
+<script src="js/intro.js" defer></script>
+</body></html>
