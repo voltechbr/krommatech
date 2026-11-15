@@ -1,0 +1,153 @@
+{
+ "expositor-palhetas-rodas": {
+  "w": 894,
+  "h": 1590,
+  "widths": [
+   480,
+   800,
+   894
+  ],
+  "fallback": 800
+ },
+ "fachada-kromma-tech": {
+  "w": 2400,
+  "h": 1240,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "fallback": 800
+ },
+ "mecanico-alinhamento-roda": {
+  "w": 900,
+  "h": 1602,
+  "widths": [
+   480,
+   800,
+   900
+  ],
+  "fallback": 800
+ },
+ "picape-amarela-4x4-loja": {
+  "w": 2190,
+  "h": 1288,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "fallback": 800
+ },
+ "picape-preta-galpao-pneus": {
+  "w": 900,
+  "h": 1514,
+  "widths": [
+   480,
+   800,
+   900
+  ],
+  "fallback": 800
+ },
+ "picape-preta-na-loja": {
+  "w": 1212,
+  "h": 1598,
+  "widths": [
+   480,
+   800,
+   1200,
+   1212
+  ],
+  "fallback": 800
+ },
+ "pneu-etiqueta-vitrine": {
+  "w": 1512,
+  "h": 1516,
+  "widths": [
+   480,
+   800,
+   1200,
+   1512
+  ],
+  "fallback": 800
+ },
+ "pneus-empilhados-na-porta": {
+  "w": 1510,
+  "h": 1550,
+  "widths": [
+   480,
+   800,
+   1200,
+   1510
+  ],
+  "fallback": 800
+ },
+ "pneus-off-road-empilhados": {
+  "w": 1320,
+  "h": 1596,
+  "widths": [
+   480,
+   800,
+   1200,
+   1320
+  ],
+  "fallback": 800
+ },
+ "roda-polida-aro-estudio": {
+  "w": 1292,
+  "h": 1376,
+  "widths": [
+   480,
+   800,
+   1200,
+   1292
+  ],
+  "fallback": 800
+ },
+ "roda-polida-oito-furos": {
+  "w": 2000,
+  "h": 2130,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "fallback": 800
+ },
+ "roda-preta-friso-vermelho": {
+  "w": 1304,
+  "h": 1590,
+  "widths": [
+   480,
+   800,
+   1200,
+   1304
+  ],
+  "fallback": 800
+ },
+ "roda-preta-polida-na-caixa": {
+  "w": 1328,
+  "h": 1684,
+  "widths": [
+   480,
+   800,
+   1200,
+   1328
+  ],
+  "fallback": 800
+ },
+ "vitrine-molas-eibach": {
+  "w": 1310,
+  "h": 2232,
+  "widths": [
+   480,
+   800,
+   1200,
+   1310
+  ],
+  "fallback": 800
+ }
+}
