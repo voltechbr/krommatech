@@ -1,0 +1,47 @@
+/* KROMMA TECH — Etapa 2: loading cinematográfico (só na 1ª entrada da sessão).
+   Tudo aqui só vale com <html class="has-intro">, aplicado por um script inline no <head>.
+   Sem JS, sem sessão nova ou com "reduzir movimento": o overlay nem existe. */
+.intro{display:none}
+.has-intro,.has-intro body{overflow:hidden}
+.has-intro .intro{display:block;position:fixed;inset:0;z-index:1000;overflow:hidden;contain:strict;background:transparent;touch-action:none}
+
+.intro__stage{position:absolute;inset:0}
+.intro__scene{position:absolute;inset:0;overflow:hidden;background:var(--k-black);will-change:clip-path}
+/* estúdio escuro: luz suave de fundo + um fio de luz vermelha na altura do eixo da roda */
+.intro__bg{position:absolute;inset:0;
+  background:radial-gradient(70% 60% at 50% 52%,rgba(48,48,56,.55),rgba(5,5,5,0) 70%),
+             radial-gradient(60% 30% at 50% 100%,rgba(225,6,0,.16),rgba(225,6,0,0) 70%)}
+.intro__vignette{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 48%,rgba(5,5,5,0) 38%,rgba(5,5,5,.9) 100%)}
+.intro__line{position:absolute;left:50%;top:50%;height:2px;width:min(64vw,52rem);margin:0 0 0 calc(min(64vw,52rem) / -2);
+  background:linear-gradient(90deg,rgba(225,6,0,0),var(--k-red) 30%,var(--k-red) 70%,rgba(225,6,0,0));transform:scaleX(0);opacity:0}
+
+/* passagem da roda — tudo horizontal, esquerda → direita */
+.intro__trail{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.intro__streak{position:absolute;left:0;top:0;transform-origin:100% 50%;opacity:0;will-change:transform,opacity;
+  background:linear-gradient(90deg,rgba(225,6,0,0),var(--k-red-hot) 60%,#fff)}
+.intro__streak--w{background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.9))}
+.intro__streak--r{background:linear-gradient(90deg,rgba(225,6,0,0),var(--k-red) 55%,var(--k-red-hot))}
+.intro__aura{position:absolute;left:0;top:0;border-radius:50%;opacity:0;will-change:transform,opacity;
+  background:radial-gradient(closest-side,rgba(225,6,0,.5),rgba(225,6,0,.14) 55%,rgba(225,6,0,0))}
+.intro__wheel{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;display:block}
+.intro__flare{position:absolute;left:0;top:0;height:2px;opacity:0;pointer-events:none;will-change:transform,opacity;
+  background:linear-gradient(90deg,rgba(225,6,0,0),rgba(225,6,0,.9) 30%,#fff 50%,rgba(225,6,0,.9) 70%,rgba(225,6,0,0));
+  box-shadow:0 0 22px 3px rgba(225,6,0,.5)}
+/* borda vermelha da cortina diagonal (12° da logo): fica ATRÁS da roda e só aparece acima e abaixo dela */
+.intro__edge{position:absolute;left:0;top:-10vh;width:7px;height:120vh;pointer-events:none;opacity:0;will-change:transform,opacity;
+  background:linear-gradient(180deg,var(--k-red-hot),var(--k-red) 50%,var(--k-red-hot));box-shadow:0 0 28px 6px rgba(225,6,0,.55),-14px 0 0 -3px rgba(255,255,255,.7)}
+
+/* logo: nasce no centro e "voa" até o lugar exato do logo do header (FLIP feito em JS) */
+.intro__logo{position:absolute;left:0;top:0;height:auto;transform-origin:0 0;opacity:0;will-change:transform,opacity}
+.intro__ring{position:absolute;left:0;top:0;border-radius:50%;border:2px solid var(--k-red);opacity:0;pointer-events:none}
+
+.intro__skip{position:absolute;right:max(var(--gutter),env(safe-area-inset-right));bottom:max(1.25rem,env(safe-area-inset-bottom));z-index:3;
+  padding:.75rem .25rem;font:600 var(--t-xs)/1 var(--f-display);letter-spacing:var(--track-label);text-transform:uppercase;color:var(--k-dim);opacity:0}
+.intro__skip:hover,.intro__skip:focus-visible{color:var(--k-white)}
+
+/* o header só aparece quando o logo do loading "pousa" nele */
+.has-intro:not(.hero-go) .header{opacity:0}
+.header{transition:opacity .5s var(--ease),background var(--d-base) var(--ease),border-color var(--d-base) var(--ease)}
+
+@media (max-width:640px){.intro__edge{width:5px}}

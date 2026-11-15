@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<title>Kromma Tech — Guia de Identidade (interno)</title><meta name="robots" content="noindex">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css">
+<style>
+.sg section{padding-block:var(--s-8);border-top:1px solid var(--k-line)}
+.sg h2{font-size:var(--t-h3);margin-bottom:var(--s-6)}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:var(--s-3)}
+.sw div{height:6rem;padding:var(--s-3);display:flex;align-items:end;font:600 var(--t-xs)/1.2 var(--f-body);border:1px solid var(--k-line)}
+.row{display:flex;flex-wrap:wrap;gap:var(--s-5);align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:var(--s-5)}
+.sp i{display:block;height:.75rem;background:var(--k-red);margin-bottom:var(--s-1)}
+.study{position:relative;aspect-ratio:16/9;max-height:70vh;overflow:hidden;background:#000}
+.study .hero__video{position:absolute;inset:0}
+.zone{position:absolute;display:none;border:2px dashed var(--k-white);font:600 var(--t-xs)/1 var(--f-display);letter-spacing:var(--track-label);padding:var(--s-2);text-transform:uppercase}
+.show-zones .zone{display:block}
+.z-text{left:3%;bottom:4%;width:48%;height:34%;background:rgba(255,255,255,.08)}
+.z-wm{right:2.2%;bottom:3.8%;width:10%;height:5%;border-color:var(--k-red-hot);color:var(--k-red-hot);padding:0;font-size:0}
+</style></head><body class="sg">
+<header class="header"><div class="container header__inner">
+  <img class="logo" src="assets/brand/kromma-logo.png" alt="Kromma Tech" width="376" height="367"><span class="label">Guia de identidade · Etapa 1</span></div></header>
+<main class="container" style="padding-top:calc(var(--header-h) + var(--s-7))">
+<h1 style="font-size:var(--t-h2)">Kromma <span class="red">Tech</span> — fundação</h1>
+<p class="lead" style="margin-top:var(--s-4)">Preto como pista, vermelho como sinal, branco como contraste. Tudo herda do itálico inclinado da logo.</p>
+
+<section><h2>Logo</h2><div class="row">
+  <img class="logo--lg logo" src="assets/brand/kromma-logo.png" alt="Logo Kromma Tech">
+  <p>Usar sempre sobre fundo escuro, com o círculo íntegro e proporção 376×367. Arquivo original intocado em <code>assets/brand/kromma-logo-original.png</code>.</p></div></section>
+
+<section><h2>Cor</h2><div class="sw">
+  <div style="background:#050505">Black #050505</div><div style="background:#121214">Surface #121214</div><div style="background:#1a1a1d">Raise #1a1a1d</div>
+  <div style="background:#2a2a2f">Line #2a2a2f</div><div style="background:#e10600">Red #e10600</div><div style="background:#ff2a1f;color:#000">Red hot #ff2a1f</div>
+  <div style="background:#a30000">Red deep #a30000</div><div style="background:#f5f4f2;color:#000">White #f5f4f2</div><div style="background:#b4b4ba;color:#000">Mute #b4b4ba</div></div></section>
+
+<section><h2>Tipografia</h2><div class="stack">
+  <span class="label">Display — Barlow Condensed 800 itálico, caixa-alta</span>
+  <h1 style="font-size:var(--t-h1)">Potência</h1><h2>Precisão em cada giro</h2><h3>Rodas · Pneus · Serviços</h3>
+  <span class="label" style="display:block;margin-top:var(--s-5)">Corpo — Barlow 400/500</span>
+  <p class="lead">Texto de destaque em branco, legível sobre preto.</p><p>Texto corrido em cinza claro, largura máxima de 62 caracteres para leitura confortável.</p>
+  <p class="label">Rodas<span class="dot"></span>Pneus</p><p class="spec">235 / 40 R18</p></div></section>
+
+<section><h2>Espaçamento (base 4px)</h2><div class="row sp">
+  <div><i style="width:var(--s-1)"></i>4</div><div><i style="width:var(--s-2)"></i>8</div><div><i style="width:var(--s-3)"></i>12</div><div><i style="width:var(--s-4)"></i>16</div><div><i style="width:var(--s-5)"></i>24</div><div><i style="width:var(--s-6)"></i>32</div><div><i style="width:var(--s-7)"></i>48</div><div><i style="width:var(--s-8)"></i>64</div></div></section>
+
+<section><h2>Botões e tags</h2><div class="row">
+  <a class="btn" href="#">Primário <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#i-arrow"/></svg></a>
+  <a class="btn btn--light" href="#">Claro</a><a class="btn btn--outline" href="#">Contorno</a><a class="btn btn--sm" href="#">Pequeno</a><span class="tag">Etiqueta</span></div></section>
+
+<section><h2>Cards, divisores e ícones</h2><div class="grid3">
+  <a class="card" href="#"><span class="card__meta">Card padrão</span><h3 style="margin-top:var(--s-3)">Título</h3><p style="margin-top:var(--s-3)">Passe o mouse: o filete lateral vira vermelho.</p></a>
+  <div class="card card--hot"><span class="card__meta">Card em destaque</span><h3 style="margin-top:var(--s-3)">Título</h3><p style="margin-top:var(--s-3)">Estado ativo.</p></div></div>
+  <div class="stack" style="margin-top:var(--s-6)"><hr class="rule rule--racing"><div class="row" id="icons"></div></div></section>
+
+<section><h2>Movimento</h2><p>Um gesto só: wipe diagonal na entrada (800ms, ease-out expo), disparado uma vez. Hover: troca de cor + deslocamento de 4px na seta. Sem loops decorativos. Respeita <code>prefers-reduced-motion</code>.</p>
+  <h3 class="reveal" style="margin-top:var(--s-5)">Revelação de exemplo</h3></section>
+
+<section><h2>Estudo do hero — vídeo enviado</h2>
+  <label class="row" style="margin-bottom:var(--s-4)"><input type="checkbox" id="zt"> <span class="label">Mostrar zona de texto e marca d’água</span></label>
+  <div class="study hero" id="study"><div class="hero__media" style="z-index:0"><video class="hero__video" muted loop playsinline autoplay preload="metadata" poster="assets/video/hero-poster.jpg">
+    <source src="assets/video/hero-kromma.webm" type='video/webm; codecs="vp9"'><source src="assets/video/hero-kromma.mp4" type='video/mp4; codecs="avc1.640028"'></video></div>
+    <div class="hero__scrim" style="z-index:1"></div><div class="zone z-text" style="z-index:2">Zona de texto</div><div class="zone z-wm" style="z-index:2"></div></div></section>
+</main>
+<script src="js/main.js"></script>
+<script>
+fetch('assets/icons/sprite.svg').then(r=>r.text()).catch(()=>'').then(()=>{});
+document.getElementById('icons').innerHTML=['arrow','menu','close','phone','pin','check','chevron'].map(n=>'<svg class="icon"><use href="assets/icons/sprite.svg#i-'+n+'"/></svg>').join('');
+zt.onchange=()=>study.classList.toggle('show-zones',zt.checked);
+</script></body></html>

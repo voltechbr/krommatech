@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide.html
+Disallow: /_pendentes/

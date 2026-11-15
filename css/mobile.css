@@ -1,0 +1,190 @@
+/* KROMMA TECH — Etapa 12: experiência mobile pensada para celular (não é o desktop reduzido).
+   Carregado DEPOIS de site.css. Tudo aqui está dentro de media queries (≤960px) ou de regras neutras para toque:
+   o desktop (≥961px) continua exatamente como foi aprovado.
+   Enquadramentos: cada foto usa a proporção que mostra roda, pneu e veículo INTEIROS (sem cortar o que importa). */
+
+/* ---------- base de toque (todas as telas) ---------- */
+html{-webkit-tap-highlight-color:rgba(225,6,0,.22)}
+a,button,.chip{touch-action:manipulation}
+picture{display:contents}
+.slot.has-img img{image-rendering:auto}
+
+/* sem "hover preso" em telas de toque: o efeito vira feedback de pressão */
+@media (hover:none){
+  .cat:hover .slot,.gi:hover .slot,.pc:hover .slot{transform:none}
+  .cat:hover .cat__glyph{transform:none;opacity:.55}
+  .chan:not(.chan--wa):hover{transform:none}
+  .btn:hover .icon,.chan:hover .chan__go{transform:none}
+  .cat:active .slot,.pc:active .slot{transform:scale(1.03)}
+  .btn:active,.chan:active{filter:brightness(.9)}
+  .cat:active::after{transform:none}
+}
+
+/* ---------- cabeçalho + menu (≤960px) ---------- */
+@media (max-width:960px){
+  .header{padding-inline:env(safe-area-inset-left) env(safe-area-inset-right)}
+  .header.is-solid{background:rgba(5,5,5,.95);-webkit-backdrop-filter:none;backdrop-filter:none} /* blur é pesado em celular */
+  .header__inner{gap:var(--s-3)}
+  /* atalho de contato sempre à mão (antes só existia dentro do menu) */
+  .header__inner>.btn{display:inline-flex;margin-left:auto;min-height:2.75rem;padding-inline:var(--s-4);gap:var(--s-2);font-size:var(--t-sm);letter-spacing:.08em}
+  .header__inner>.btn .icon{width:1rem;height:1rem}
+  .burger{margin-left:0;margin-right:-.75rem;width:3.25rem;height:3.25rem}
+  .menu-open .header__inner>.btn{visibility:hidden}
+  .menu-open,.menu-open body{overflow:hidden;overscroll-behavior:none}
+
+  .drawer{height:100%;padding-inline:max(var(--gutter),env(safe-area-inset-left)) max(var(--gutter),env(safe-area-inset-right))}
+  .drawer a:not(.btn){min-height:4rem;transition:color var(--d-fast),padding-left var(--d-base) var(--ease),opacity var(--d-base) var(--ease),transform var(--d-base) var(--ease)}
+  .drawer a:not(.btn):active{color:var(--k-red);padding-left:.5rem}
+  .drawer>a{opacity:0;transform:translateX(-14px)}
+  .drawer.is-open>a{opacity:1;transform:none}
+  .drawer.is-open>a:nth-child(1){transition-delay:.04s}.drawer.is-open>a:nth-child(2){transition-delay:.08s}
+  .drawer.is-open>a:nth-child(3){transition-delay:.12s}.drawer.is-open>a:nth-child(4){transition-delay:.16s}
+  .drawer.is-open>a:nth-child(5){transition-delay:.2s}.drawer.is-open>a:nth-child(6){transition-delay:.26s}
+}
+
+/* ---------- HERO: entrada mais leve (sem blur animado em tela cheia) ---------- */
+@media (max-width:900px){
+  @keyframes h-stage-m{from{opacity:.001;transform:scale(1.1)}40%{opacity:1}to{opacity:1;transform:none}}
+  @keyframes h-up-m{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .hero-go .hero--home .hero__stage{animation-name:h-stage-m;animation-duration:1.5s}
+  .hero-go .hero__lead{animation-name:h-up-m}
+  .hero__copy{will-change:auto}
+}
+
+/* ---------- CATEGORIAS ---------- */
+@media (max-width:899px){
+  .cats__rail{display:grid;grid-template-columns:1fr 1fr;height:auto;gap:var(--s-3)}
+  .cat{min-height:0;aspect-ratio:3/4;padding:var(--s-4)}
+  .cat:nth-child(1){grid-column:1/-1;min-height:0;aspect-ratio:6/5}   /* Rodas: roda inteira */
+  .cat:nth-child(6){grid-column:1/-1;min-height:0;aspect-ratio:1/1}   /* Veículos: picape inteira (rodas e teto) */
+  .cat__n{top:var(--s-3);left:var(--s-4)}
+  .cat__glyph{top:var(--s-3);right:var(--s-4);width:2rem;height:2rem}
+  .cat h3{font-size:clamp(1.15rem,.9rem + 1.1vw,1.6rem)}
+  /* enquadramento por foto */
+  .cat .slot[data-slot="categoria-rodas"] img{object-position:50% 78%!important}
+  .cat .slot[data-slot="categoria-pneus"] img{object-position:50% 40%!important}
+  .cat .slot[data-slot="categoria-pecas"] img{object-position:50% 30%!important}
+  .cat .slot[data-slot="categoria-acessorios"] img{object-position:50% 70%!important}
+  .cat .slot[data-slot="categoria-servicos"] img{object-position:50% 30%!important}
+  .cat .slot[data-slot="categoria-veiculos"] img{object-position:50% 72%!important}
+}
+@media (min-width:641px) and (max-width:899px){
+  .cats__rail{grid-template-columns:repeat(12,1fr)}
+  .cat{grid-column:span 3}
+  .cat:nth-child(1),.cat:nth-child(2){grid-column:span 6;aspect-ratio:1/1}
+  .cat:nth-child(6){grid-column:span 3;aspect-ratio:3/4}
+}
+
+/* ---------- PRODUTOS EM DESTAQUE ---------- */
+@media (max-width:899px){
+  /* cada foto na proporção original: roda e pneu aparecem inteiros */
+  .feat__grid .pc--a .slot,.feat__grid .pc--b .slot{aspect-ratio:646/688!important;height:auto;min-height:0} /* mesma altura nos dois: botões alinhados */
+  .feat__grid .pc--b .slot img{object-position:50% 38%!important}
+  .feat__grid .pc .pc__media,.feat__grid .pc--a .pc__media,.feat__grid .pc--b .pc__media{flex:none;min-height:0}
+}
+@media (min-width:641px) and (max-width:899px){
+  .feat__grid{grid-template-columns:1fr 1fr}
+  .feat__grid .pc--a,.feat__grid .pc--b,.feat__grid.is-filtered .pc{grid-column:span 1}
+  .feat__grid .pc{height:100%}
+  .feat__grid .pc__info{margin-top:auto}
+}
+/* celular: trilho que se arrasta com o dedo (encaixa card a card), em vez de 2 telas de rolagem */
+@media (max-width:640px){
+  .feat__grid{display:flex;gap:var(--s-3);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);padding-bottom:2px}
+  .feat__grid::-webkit-scrollbar{display:none}
+  .feat__grid .pc,.feat__grid.is-filtered .pc{flex:0 0 84%;grid-column:auto;scroll-snap-align:start;scroll-snap-stop:always}
+  .feat__grid .pc:last-child{margin-right:var(--gutter)}
+  .feat__grid .pc__info{margin-top:auto;padding:var(--s-4) var(--s-4) var(--s-5)}
+  .pc .btn,.pc--c .btn,.pc--d .btn{font-size:var(--t-md);padding-inline:var(--s-4);letter-spacing:.05em}
+  .pc__info h3{font-size:1.5rem}
+  .feat__dots{display:flex;justify-content:center;gap:var(--s-2);margin-top:var(--s-5)}
+  .feat__dots i{display:block;width:1.5rem;height:3px;background:#c9c9ce;transform:skewX(-12deg);transition:background var(--d-base),width var(--d-base) var(--ease)}
+  .feat__dots i.is-on{width:2.5rem;background:var(--k-red)}
+}
+@media (min-width:641px){.feat__dots{display:none}}
+
+/* ---------- SOBRE ---------- */
+@media (max-width:860px){
+  .about__grid{gap:var(--s-6)}
+  .about .stack{order:-1}                                   /* título primeiro, como nas outras seções */
+  .about__comp{padding-bottom:0}
+  .about__main{width:100%;aspect-ratio:755/775!important}   /* pilha de pneus inteira */
+  .about__bar{top:var(--s-5)}
+}
+@media (min-width:641px) and (max-width:860px){.about__comp{max-width:34rem}}
+
+/* ---------- FACHADA ---------- */
+@media (max-width:700px){
+  .loja__a.has-img{--ar:16/9!important}
+  .loja__a.has-img img{object-position:40% 50%!important}
+}
+
+/* ---------- GALERIA ---------- */
+@media (max-width:700px){
+  .gal__grid{gap:var(--s-2)}
+  .gal__grid .g1 .slot{aspect-ratio:5/4!important;height:auto}
+  .gal__grid .g1 .slot img{object-position:50% 80%!important}               /* picape preta inteira */
+  .gal__grid .g5 .slot{aspect-ratio:1095/644!important;height:auto;min-height:0} /* picape amarela sem cortes */
+  .gal__grid .g2 .slot,.gal__grid .g6 .slot{aspect-ratio:4/5!important;height:auto}
+  .gal__grid .g2 .slot img,.gal__grid .g6 .slot img{object-position:50% 50%!important}
+  .gi figcaption{padding:var(--s-7) var(--s-3) var(--s-3)}
+}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.loc__map{contain:layout paint;transform:translateZ(0)}               /* filtro do mapa na GPU: rolagem sem engasgo */
+.loc__tap{display:none}
+@media (hover:none) and (pointer:coarse){
+  /* o mapa não "rouba" a rolagem da página: toque uma vez para mexer nele */
+  .loc__map iframe{pointer-events:none}
+  .loc__map.is-live iframe{pointer-events:auto}
+  .loc__tap{position:absolute;inset:0;z-index:2;display:flex;align-items:flex-start;justify-content:flex-end;padding:var(--s-3);background:none}
+  .loc__tap span{padding:.65rem .9rem;background:rgba(5,5,5,.82);border-left:2px solid var(--k-red);color:var(--k-white)}
+  .loc__map.is-live .loc__tap{display:none}
+}
+@media (max-width:700px){
+  .loc__map{height:20rem}
+  .loc__over{margin-top:-2.5rem}
+  .loc__card{gap:var(--s-4)}
+  .loc__cta{width:100%;flex-direction:column}
+}
+
+/* ---------- CONTATO ---------- */
+@media (max-width:640px){
+  .contact__chan{gap:var(--s-3)}
+  .chan{flex:1 1 100%;min-height:4.5rem}
+  .chan__txt b{font-size:1.5rem}
+  .chan__txt span{font-size:var(--t-md);opacity:.85}
+}
+
+/* ---------- RODAPÉ ---------- */
+@media (max-width:899px){
+  .footer li a{display:flex;align-items:center;min-height:2.75rem;padding-block:0}
+  .pc .btn,.pc .btn--sm{min-height:2.75rem}
+}
+@media (max-width:640px){
+  .footer__grid{grid-template-columns:1fr;gap:var(--s-6)}
+  .footer__brand{grid-column:auto}
+  .footer__grid>:last-child{grid-column:auto}
+  .footer__grid ul:not(.footer__contact){grid-template-columns:1fr 1fr;column-gap:var(--s-4);row-gap:0}
+  .footer li a{display:flex;align-items:center;min-height:2.75rem;padding-block:0}
+  .footer__contact li{align-items:center}
+  .footer__contact .icon{margin-top:0}
+  .footer__contact li a{min-height:2.75rem}
+}
+
+/* ---------- espaçamento vertical e legibilidade (celular) ---------- */
+@media (max-width:640px){
+  :root{--section-y:3.5rem}
+  .sec-head{gap:var(--s-3)}
+  .label{font-size:.78rem}
+  .hero__eyebrow{font-size:.75rem}
+}
+@media (max-width:360px){
+  :root{--gutter:1rem}
+  .cat h3{font-size:1.05rem}
+  .header__inner>.btn{padding-inline:var(--s-3)}
+  .hero__eyebrow{font-size:.68rem}
+  .hero__eyebrow .dot{margin-inline:.5em}
+  .hero__cta .btn{white-space:normal;padding-inline:var(--s-3);letter-spacing:.03em;font-size:1rem;gap:var(--s-2)}
+}

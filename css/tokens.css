@@ -1,0 +1,33 @@
+/* KROMMA TECH — design tokens. Única fonte de verdade: mude aqui, o site inteiro acompanha. */
+:root{
+  /* Cor — preto domina, vermelho (amostrado da logo) é destaque, branco é contraste */
+  --k-black:#050505; --k-ink:#0b0b0c; --k-surface:#121214; --k-raise:#1a1a1d; --k-line:#2a2a2f;
+  --k-white:#f5f4f2; --k-mute:#b4b4ba; --k-dim:#7f7f87;
+  --k-red:#e10600; --k-red-hot:#ff2a1f; --k-red-deep:#a30000;
+
+  /* Tipografia */
+  --f-display:"Barlow Condensed","Arial Narrow",Impact,sans-serif; /* títulos, números, botões */
+  --f-body:"Barlow","Helvetica Neue",Arial,sans-serif;             /* texto corrido */
+  --t-xs:.75rem; --t-sm:.875rem; --t-md:1rem; --t-lg:1.125rem; --t-xl:1.375rem;
+  --t-h3:clamp(1.5rem,1.1rem + 1.4vw,2.25rem);
+  --t-h2:clamp(2.25rem,1.4rem + 3.6vw,4.5rem);
+  --t-h1:clamp(3rem,1.2rem + 8vw,8rem);
+  --track-label:.22em;
+
+  /* Espaçamento — base 4px */
+  --s-1:.25rem; --s-2:.5rem; --s-3:.75rem; --s-4:1rem; --s-5:1.5rem; --s-6:2rem; --s-7:3rem; --s-8:4rem; --s-9:6rem; --s-10:8rem;
+  --section-y:clamp(4rem,3rem + 6vw,9rem);
+  --gutter:clamp(1.25rem,.5rem + 3vw,3rem);
+  --container:80rem;
+
+  /* Forma — o "slash" de 12° vem do itálico da logo */
+  --slash:12deg; --cut:14px;
+  --shape-btn:polygon(var(--cut) 0,100% 0,calc(100% - var(--cut)) 100%,0 100%);
+  --shape-card:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%);
+
+  /* Movimento */
+  --ease:cubic-bezier(.16,1,.3,1);
+  --d-fast:160ms; --d-base:320ms; --d-slow:800ms;
+  --header-h:4.5rem;
+}
+@media (max-width:640px){:root{--cut:10px;--header-h:4rem}}
